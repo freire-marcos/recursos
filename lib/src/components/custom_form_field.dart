@@ -1,19 +1,18 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/services.dart';
 
 class CustomFormField extends StatefulWidget {
   final IconData icon;
   final String label;
   final bool isSecret;
+  final List<TextInputFormatter>? inpuTFormatters;
 
   const CustomFormField({
     Key? key,
     required this.icon,
     required this.label,
     this.isSecret = false,
+    this.inpuTFormatters
   }) : super(key: key);
 
   @override
@@ -35,6 +34,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: TextFormField(
+        inputFormatters: widget.inpuTFormatters,
         obscureText: obscure,
         decoration: InputDecoration(
           prefixIcon: Icon(widget.icon),
