@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:recursos/src/auth/sign_up_screen.dart';
-import 'package:recursos/src/base/base_screen.dart';
+import 'package:recursos/pages/auth/sign_up_screen.dart';
+import 'package:recursos/pages/base/base_screen.dart';
 import 'package:recursos/src/components/custom_form_field.dart';
 import 'package:recursos/src/config/custom_colors.dart';
 
